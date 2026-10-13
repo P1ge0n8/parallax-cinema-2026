@@ -1,0 +1,18 @@
+.social-icon-buttons{position:absolute;z-index:3;left:50%;bottom:max(32px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:14px}
+.social-icon-button{position:relative;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(14,20,18,.5);backdrop-filter:blur(10px);color:var(--social-brand);isolation:isolate;transition:background .25s}
+.social-button-border{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.social-button-border-base{fill:none;stroke:rgba(213,230,222,.22);stroke-width:.7;transition:stroke .25s}
+.social-button-border-edge{fill:none;stroke-width:1;opacity:0;transition:opacity .25s}
+.social-button-fill-edge{opacity:0;transition:opacity .25s}
+.social-icon-button[data-adjacent-side] .social-button-border-edge,.social-icon-button[data-adjacent-side] .social-button-fill-edge{opacity:1}
+.social-icon-button-swap{grid-area:1/1;display:grid;place-items:center;width:36px;height:36px;transition:opacity .24s,transform .3s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.social-icon-button-swap img{display:block;width:100%;height:100%;object-fit:contain}
+.social-icon-xiaohongshu{width:43px}.social-icon-xiaoyuzhou{width:36px;height:36px}
+.social-icon-button-arrow{width:19px;height:19px;opacity:0;transform:translateX(-7px)}.social-icon-button-arrow svg{width:100%;height:100%}
+.social-icon-button:is(:hover,:focus-visible){background:color-mix(in srgb,var(--social-brand) 9%,#101512)}
+.social-icon-button:is(:hover,:focus-visible) .social-button-border-base{stroke:var(--social-brand)}
+.social-icon-button:is(:hover,:focus-visible) .social-icon-button-swap:not(.social-icon-button-arrow){opacity:0;transform:translateX(7px)}
+.social-icon-button:is(:hover,:focus-visible) .social-icon-button-arrow{opacity:1;transform:translateX(0)}
+.social-icon-button:focus-visible{outline:1px solid var(--social-brand);outline-offset:5px}
+@media(max-height:580px){.social-icon-buttons{bottom:16px}.landing-logo{gap:16px}.landing .dog{width:240px;height:240px}}
+@media(prefers-reduced-motion:reduce){.social-icon-button,.social-icon-button *{transition:none!important}}
