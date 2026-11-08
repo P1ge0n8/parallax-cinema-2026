@@ -1,0 +1,7 @@
+@font-face{font-family:ParallaxPixelSC;src:url('/fonts/fusion-sc.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:ParallaxPixelTW;src:url('/fonts/fusion-tw.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:ParallaxPixelLatin;src:url('/fonts/fusion-latin.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root{--pixel-font:ParallaxPixelSC,monospace}
+:root[lang='zh-TW']{--pixel-font:ParallaxPixelTW,monospace}
+:root[lang='en']{--pixel-font:ParallaxPixelLatin,monospace}
+body{font-family:var(--pixel-font);font-synthesis:none;text-rendering:geometricPrecision}

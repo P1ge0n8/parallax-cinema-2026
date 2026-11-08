@@ -1,3 +1,4 @@
+import {textFor} from './i18n.js';
 import { useId, useState } from 'react';
 import './social-icon-buttons.css';
 
@@ -24,14 +25,14 @@ function SocialButtonBorder({ side, brand }) {
   </svg>;
 }
 
-export function SocialIconButtons() {
+export function SocialIconButtons({language="zh-CN"}) {
   const [hovered, setHovered] = useState(-1);
   const [focused, setFocused] = useState(-1);
   const active = hovered >= 0 ? hovered : focused;
-  return <div className="social-icon-buttons" role="group" aria-label="关注视差之见" onMouseLeave={() => setHovered(-1)}>
+  return <div className="social-icon-buttons" role="group" aria-label={textFor(language,'followGroup')} onMouseLeave={() => setHovered(-1)}>
     {socials.map((social, index) => {
       const side = active < 0 || index === active ? undefined : index < active ? 'right' : 'left';
-      return <a className="social-icon-button" key={social.icon} href={social.href} target="_blank" rel="noopener noreferrer" title={social.label} aria-label={`${social.label}（新窗口打开）`} data-adjacent-side={side} style={{ '--social-brand': social.brand }} onMouseEnter={() => setHovered(index)} onFocus={() => setFocused(index)} onBlur={() => setFocused(-1)}>
+      return <a className="social-icon-button" key={social.icon} href={social.href} target="_blank" rel="noopener noreferrer" title={textFor(language,social.icon)} aria-label={`${textFor(language,social.icon)} (${textFor(language,'newWindow')})`} data-adjacent-side={side} style={{ '--social-brand': social.brand }} onMouseEnter={() => setHovered(index)} onFocus={() => setFocused(index)} onBlur={() => setFocused(-1)}>
         <SocialButtonBorder side={side} brand={active < 0 ? 'transparent' : socials[active].brand}/>
         <span className={'social-icon-button-swap social-icon-'+social.icon}><img src={`${import.meta.env.BASE_URL}assets/social/${social.icon}.png`} alt=""/></span>
         <span className="social-icon-button-swap social-icon-button-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>

@@ -1,0 +1,297 @@
+// Keep the existing key so saved Chinese/English preferences migrate without a reset.
+export const LANGUAGE_KEY='parallax-language:v1';
+export const LANGUAGES=['zh-TW','zh-CN','en'];
+export const validLanguage=value=>value==='en'?'en':value==='zh-TW'?'zh-TW':'zh-CN';
+export const nextLanguage=value=>LANGUAGES[(LANGUAGES.indexOf(validLanguage(value))+1)%LANGUAGES.length];
+export const languageLabels={'zh-TW':'繁中','zh-CN':'简中',en:'ENG'};
+export const pixelFamilies={'zh-TW':'ParallaxPixelTW','zh-CN':'ParallaxPixelSC',en:'ParallaxPixelLatin'};
+export const copy={
+  "zh-CN": {
+    "about": "关于我们",
+    "podcast": "播客",
+    "articles": "文章",
+    "contact": "联系我们",
+    "home": "首页",
+    "directory": "导览",
+    "back": "返回导览",
+    "backPodcasts": "返回播客",
+    "close": "返回空间",
+    "choose": "选择一个频道",
+    "gallery": "一场电影，三种相遇。",
+    "hover": "悬停，与它们打个招呼。",
+    "guideHint": "悬停识别 · 点击进入",
+    "guideKeys": "方向键选择 / ESC 返回桌面",
+    "galleryKeys": "点击进入节目 / ESC 返回导览",
+    "backDesk": "返回桌面",
+    "soundOff": "声音：关",
+    "soundOn": "声音：开",
+    "manual": "使用手册",
+    "reset": "复位",
+    "done": "知道了",
+    "loading": "正在接通落日信号",
+    "world": "落日水面前的旧木桌，十件物品可互动。电脑固定，点击进入导览。方向键选择物品，Enter 使用，拖动空白处环绕，滚轮缩放。",
+    "slogan": [
+      "随时听",
+      "随处看",
+      "视差之见"
+    ],
+    "aboutTitle": "视线有偏差，电影有回声。",
+    "aboutP1": "每一双眼睛，乃至每一只眼，看电影和世界的角度都不尽相同，也造就了我们有时截然不同的“观点”。",
+    "aboutP2": "允许不同视角的交流、不同立场的碰撞，这里是“视差”发声的空间。",
+    "contactTitle": "从一句话开始。",
+    "contactP": "选题、合作，或只是分享一部电影。",
+    "follow": "在小宇宙关注视差之见 ↗",
+    "listen": "在小宇宙收听（新窗口）",
+    "episodes": "节目目录",
+    "empty": "节目整理中",
+    "stay": "stay tuned",
+    "notFound": "这一帧走丢了。",
+    "filmFest": "影节庆",
+    "focus": "焦点",
+    "cinema": "院线",
+    "use": "点击使用 · 拖动移动",
+    "enter": "点击进入导览",
+    "fixed": "电脑已固定在桌缘。",
+    "resetDone": "桌面已复位。",
+    "returned": "已返回桌面。",
+    "approach": "靠近平视 · 进入导览",
+    "noAudio": "此浏览器暂不支持音频。",
+    "manualTitle": "落日使用手册",
+    "manualP1": "点击电脑，镜头靠近平视，桌子与物件化作微粒，四个频道在原处显现。选择播客，进入红酒、巴哥犬和摄影猫头鹰的三件物品。",
+    "manualP2": "悬停物品查看名称，点击使用，按住拖动调整位置，按住 Shift 拖动可慢速微调，Esc 取消本次拖动。电脑固定不可移动。拖动空白处可以环绕桌子，滚轮或双指缩放。颗粒、低像素与鱼眼效果是这个空间的一部分。",
+    "manualP3": "右上角骰子依次切换繁中、简中和英文。栏目内容在同一片落日中展开，背景轻微磨砂。返回按钮或 Esc 逐层退出，右下角复位回到桌面。",
+    "manualP4": "键盘：Tab 进入画面，左右方向键选择物品，Enter 使用；Shift + 方向键微调所选物品，同时按 Alt 可更细微地移动。导览与播客中用方向键选择、Enter 确认。点击电脑或马克杯会播放原声，右下角声音按钮可以静音。",
+    "brand": "视差之见",
+    "siteTitle": "视差之见 · 落日时分",
+    "logoAlt": "视差之见标识",
+    "readingLabel": "栏目阅读",
+    "categorySwitch": "切换播客栏目",
+    "sceneUnavailable": "场景暂时无法显示，请从栏目继续。",
+    "followGroup": "关注视差之见",
+    "newWindow": "新窗口打开",
+    "xiaohongshu": "小红书",
+    "xiaoyuzhou": "小宇宙",
+    "positionAdjusted": "位置已调整",
+    "languageHint": "切换语言"
+  },
+  "zh-TW": {
+    "about": "關於我們",
+    "podcast": "Podcast",
+    "articles": "文章",
+    "contact": "聯絡我們",
+    "home": "首頁",
+    "directory": "導覽",
+    "back": "返回導覽",
+    "backPodcasts": "返回 Podcast",
+    "close": "返回空間",
+    "choose": "選擇一個頻道",
+    "gallery": "一場電影，三種相遇。",
+    "hover": "將滑鼠移到物件上，打個招呼。",
+    "guideHint": "移入辨識 · 點選進入",
+    "guideKeys": "方向鍵選擇 / ESC 返回桌面",
+    "galleryKeys": "點選進入節目 / ESC 返回導覽",
+    "backDesk": "返回桌面",
+    "soundOff": "聲音：關",
+    "soundOn": "聲音：開",
+    "manual": "使用手冊",
+    "reset": "重設",
+    "done": "知道了",
+    "loading": "正在接通落日訊號",
+    "world": "落日水面前的舊木桌，十件物件可互動。電腦固定，點選進入導覽。方向鍵選擇物件，Enter 使用，拖曳空白處環繞，滾輪縮放。",
+    "slogan": [
+      "隨時聽",
+      "隨處看",
+      "視差之見"
+    ],
+    "aboutTitle": "視線有偏差，電影有回聲。",
+    "aboutP1": "每一雙眼睛，乃至每一隻眼，看電影和世界的角度都不盡相同，也造就了我們有時截然不同的「觀點」。",
+    "aboutP2": "允許不同視角的交流、不同立場的碰撞，這裡是「視差」發聲的空間。",
+    "contactTitle": "從一句話開始。",
+    "contactP": "主題提案、合作，或只是分享一部電影。",
+    "follow": "在小宇宙追蹤視差之見 ↗",
+    "listen": "在小宇宙收聽（另開視窗）",
+    "episodes": "節目目錄",
+    "empty": "節目整理中",
+    "stay": "stay tuned",
+    "notFound": "這一格畫面走丟了。",
+    "filmFest": "影節慶",
+    "focus": "焦點",
+    "cinema": "院線",
+    "use": "點選使用 · 拖曳移動",
+    "enter": "點選進入導覽",
+    "fixed": "電腦已固定在桌緣。",
+    "resetDone": "桌面已重設。",
+    "returned": "已返回桌面。",
+    "approach": "靠近平視 · 進入導覽",
+    "noAudio": "此瀏覽器暫不支援音訊。",
+    "manualTitle": "落日使用手冊",
+    "manualP1": "點選電腦，鏡頭靠近平視，桌子與物件化作微粒，四個頻道在原處顯現。選擇 Podcast，進入紅酒、巴哥犬和攝影貓頭鷹的三件物件。",
+    "manualP2": "將滑鼠移到物件上查看名稱，點選使用，按住拖曳調整位置，按住 Shift 拖曳可慢速微調，Esc 取消本次拖曳。電腦固定不可移動。拖曳空白處可以環繞桌子，滾輪或雙指縮放。顆粒、低解析度與魚眼效果是這個空間的一部分。",
+    "manualP3": "右上角骰子依序切換繁中、簡中與英文。各個單元在同一片落日中展開，背景輕微霧化。返回按鈕或 Esc 逐層退出，右下角重設可回到桌面。",
+    "manualP4": "鍵盤：Tab 進入畫面，左右方向鍵選擇物件，Enter 使用；Shift + 方向鍵微調所選物件，同時按 Alt 可更細微地移動。在導覽與 Podcast 中用方向鍵選擇、Enter 確認。點選電腦或馬克杯會播放原聲，右下角聲音按鈕可靜音。",
+    "brand": "視差之見",
+    "siteTitle": "視差之見 · 落日時分",
+    "logoAlt": "視差之見標誌",
+    "readingLabel": "單元閱讀",
+    "categorySwitch": "切換 Podcast 單元",
+    "sceneUnavailable": "場景暫時無法顯示，請從頻道繼續。",
+    "followGroup": "追蹤視差之見",
+    "newWindow": "另開視窗",
+    "xiaohongshu": "小紅書",
+    "xiaoyuzhou": "小宇宙",
+    "positionAdjusted": "位置已調整",
+    "languageHint": "切換語言"
+  },
+  "en": {
+    "about": "About us",
+    "podcast": "Podcast",
+    "articles": "Articles",
+    "contact": "Contact",
+    "home": "Home",
+    "directory": "Directory",
+    "back": "Back to directory",
+    "backPodcasts": "Back to podcasts",
+    "close": "Back to the space",
+    "choose": "Choose a channel",
+    "gallery": "One film. Three encounters.",
+    "hover": "Hover. Say hello.",
+    "guideHint": "HOVER TO DISCOVER · CLICK TO ENTER",
+    "guideKeys": "ARROW KEYS TO CHOOSE / ESC TO DESK",
+    "galleryKeys": "CLICK FOR EPISODES / ESC TO DIRECTORY",
+    "backDesk": "Back to desk",
+    "soundOff": "Sound: off",
+    "soundOn": "Sound: on",
+    "manual": "Field guide",
+    "reset": "Reset",
+    "done": "Got it",
+    "loading": "Tuning in to the golden hour",
+    "world": "An old wooden desk at sunset, with ten interactive objects. Click the fixed computer to enter. Use arrow keys to select objects, Enter to interact, drag empty space to orbit and scroll to zoom.",
+    "slogan": [
+      "Listen Everytime,",
+      "Look Everywhere,",
+      "Feel The PARALLAX."
+    ],
+    "aboutTitle": "Different perspectives. Cinematic echoes.",
+    "aboutP1": "Every pair of eyes—and even each individual eye—sees cinema and the world from a different angle. Those differences shape our sometimes radically different points of view.",
+    "aboutP2": "A place for different perspectives to meet and different positions to collide. This is a space where PARALLAX speaks.",
+    "contactTitle": "It starts with a conversation.",
+    "contactP": "A story idea, a collaboration, or simply a film you want to share.",
+    "follow": "Follow PARALLAX on Xiaoyuzhou ↗",
+    "listen": "Listen on Xiaoyuzhou (new window)",
+    "episodes": "EPISODE DIRECTORY",
+    "empty": "Episodes are being curated",
+    "stay": "stay tuned",
+    "notFound": "This frame has gone missing.",
+    "filmFest": "Film Fest",
+    "focus": "Focus",
+    "cinema": "Cinema",
+    "use": "Click to interact · Drag to move",
+    "enter": "Click to enter the directory",
+    "fixed": "The computer is fixed to the desk.",
+    "resetDone": "The desk has been reset.",
+    "returned": "Back at the desk.",
+    "approach": "Moving closer · Entering the directory",
+    "noAudio": "Audio is unavailable in this browser.",
+    "manualTitle": "A guide to the golden hour",
+    "manualP1": "Click the computer to move closer. The desk dissolves into particles, revealing four channels. Choose Podcast to meet a glass of wine, a cinema-loving pug and an owl photographer.",
+    "manualP2": "Hover to identify an object. Click to use it; drag to move it. Hold Shift while dragging for precision; Esc cancels the current drag. The computer stays fixed. Drag empty space to orbit, or scroll and pinch to zoom. Grain, low resolution and fisheye distortion are part of this space.",
+    "manualP3": "Click the die to cycle through Traditional Chinese (Taiwan), Simplified Chinese (China) and English. Reading opens over the same sunset, gently frosted. Back or Escape returns one level; Reset returns to the desk.",
+    "manualP4": "Keyboard: Tab into the scene, use left/right arrows to choose an object and Enter to interact. Shift + arrows nudges the selected object; add Alt for smaller steps. In the directory and podcast gallery, arrows select and Enter confirms. Click the computer or mug to hear the original voices. The sound button mutes all audio.",
+    "brand": "PARALLAX",
+    "siteTitle": "PARALLAX · The Golden Hour",
+    "logoAlt": "PARALLAX logo",
+    "readingLabel": "Reading room",
+    "categorySwitch": "Podcast categories",
+    "sceneUnavailable": "The scene is unavailable. Continue with a channel.",
+    "followGroup": "Follow PARALLAX",
+    "newWindow": "new window",
+    "xiaohongshu": "Xiaohongshu",
+    "xiaoyuzhou": "Xiaoyuzhou",
+    "positionAdjusted": "Position adjusted",
+    "languageHint": "Change language"
+  }
+};
+export const textFor=(language,key)=>copy[validLanguage(language)][key]??key;
+const objectNames={
+  "terminal": [
+    "监视终端",
+    "監視終端",
+    "Cinema terminal"
+  ],
+  "phone": [
+    "翻盖手机",
+    "摺疊手機",
+    "Flip phone"
+  ],
+  "tape": [
+    "磁带录音机",
+    "卡帶錄音機",
+    "Cassette recorder"
+  ],
+  "lamp": [
+    "3D 巴哥犬",
+    "3D 巴哥犬",
+    "Pug in 3D glasses"
+  ],
+  "file": [
+    "交接档案",
+    "交接檔案",
+    "Case file"
+  ],
+  "mug": [
+    "微笑马克杯",
+    "微笑馬克杯",
+    "Smiley mug"
+  ],
+  "trophy": [
+    "金棕榈奖杯",
+    "金棕櫚獎盃",
+    "Palme d’Or"
+  ],
+  "wine": [
+    "倾倒的红酒杯",
+    "傾倒的紅酒杯",
+    "Spilled wine"
+  ],
+  "bear": [
+    "金熊奖杯",
+    "金熊獎盃",
+    "Golden Bear"
+  ],
+  "lion": [
+    "金狮奖杯",
+    "金獅獎盃",
+    "Golden Lion"
+  ]
+};
+export const objectName=(language,id)=>objectNames[id]?.[language==='en'?2:language==='zh-TW'?1:0]||id;
+const messagesTW={
+  "屏幕亮起：03:17 / 没有信号。": "螢幕亮起：03:17 / 沒有訊號。",
+  "手机已合上。": "手機已闔上。",
+  "正在播放：上一班的空白录音。": "正在播放：上一班的空白錄音。",
+  "磁带已暂停": "卡帶已暫停",
+  "巴哥犬戴好眼镜，继续观影。": "巴哥犬戴好眼鏡，繼續看電影。",
+  "巴哥犬歪了歪头。": "巴哥犬歪了歪頭。",
+  "交接记录：03:17 / 没有变化。": "交接紀錄：03:17 / 沒有變化。",
+  "档案已合上。": "檔案已闔上。",
+  "杯底刻着：你不是第一个。": "杯底刻著：你不是第一個。",
+  "杯子仍然是温的。": "杯子仍然是溫的。",
+  "金棕榈 · 另一面的光": "金棕櫚 · 另一面的光",
+  "金熊 · 柏林的金色回声": "金熊 · 柏林的金色回聲",
+  "金狮 · 威尼斯的风": "金獅 · 威尼斯的風",
+  "酒杯轻轻晃动，酒渍留在原处。": "酒杯輕輕晃動，酒漬留在原處。"
+};
+export const localMessage=(language,zh,en)=>language==='en'?en:language==='zh-TW'?(messagesTW[zh]||zh):zh;
+export const episodeEnglish={
+  "68493eed1c45a63232a602e6": "Cannes in focus: A mediocre Palme d’Or, or just a simple accident?",
+  "684940edb23ed76e607fa4d9": "Cannes in focus: A closer look at Sons of the Neon Night and Resurrection",
+  "698fbe86a22480add6142158": "Cannes in focus: Have you been Godard-ed?",
+  "6a985441f03e74ee6b041e11": "Why Nolan never made it to Cannes"
+};
+export const episodeTraditional={
+  "68493eed1c45a63232a602e6": "聚焦坎城：平庸的金棕櫚是一次「普通事故」",
+  "684940edb23ed76e607fa4d9": "聚焦坎城：深度討論《風林火山》和《狂野時代》",
+  "698fbe86a22480add6142158": "聚焦坎城：你「高達」了沒？",
+  "6a985441f03e74ee6b041e11": "諾蘭為什麼沒進坎城"
+};
+export const episodeTitle=(language,title,id)=>language==='en'?episodeEnglish[id]:language==='zh-TW'?episodeTraditional[id]:title;

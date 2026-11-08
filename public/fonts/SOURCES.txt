@@ -1,0 +1,8 @@
+Fusion Pixel Font by TakWolf — SIL Open Font License 1.1.
+Official repository: https://github.com/TakWolf/fusion-pixel-font
+Official preview distribution, downloaded 2026-11-08:
+https://fusion-pixel-font.takwolf.com/fusion-pixel-12px-proportional-zh_hans.otf.woff2
+https://fusion-pixel-font.takwolf.com/fusion-pixel-12px-proportional-zh_tw.otf.woff2
+https://fusion-pixel-font.takwolf.com/fusion-pixel-12px-proportional-latin.otf.woff2
+The files are unmodified. The matching license is included as LICENSE-OFL.txt.
+The zh_tw flavour is used for zh-TW; zh_hans for zh-CN; latin for en.

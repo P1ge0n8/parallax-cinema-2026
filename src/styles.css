@@ -186,3 +186,6 @@ html:has(#main .podcast-page){scroll-snap-type:y proximity}
 .journal-coming{margin:0;color:#fff;font:12px/1.9 var(--terminal-font);letter-spacing:.08em;text-align:center}
 @media(max-width:700px){.journal-minimal>.eyebrow{left:24px;top:100px}.journal-coming{font-size:11px}}
 @media(max-width:700px){.journal-minimal{padding:100px 24px}}
+
+/* Signal logo: the existing homepage layout and click target stay in place. */
+.signal-logo canvas{image-rendering:auto;touch-action:manipulation}
